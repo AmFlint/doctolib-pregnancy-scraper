@@ -83,7 +83,12 @@ async function main() {
 
   const availabilities = await requestDoctolib(requestURL);
 
-  let shouldGetNextSlot = displayAvailabilitySlots(availabilities);
+  const shouldGetNextSlot = displayAvailabilitySlots(availabilities);
+  
+  if (!availabilities.next_slot) {
+    console.log('\nPour le moment, aucune disponibilité n\'est prévue après la date demandée.');
+    process.exit(0);
+  }
 
   // get next slot
   if (shouldGetNextSlot) {
