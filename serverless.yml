@@ -1,0 +1,16 @@
+service:
+  name: doctolib
+
+provider:
+  name: scaleway
+  runtime: node14
+
+plugins:
+  - serverless-scaleway-functions
+  - serverless-offline-scaleway
+
+
+functions:
+  doctolib:
+    handler: handler.handler
+    memoryLimit: 256

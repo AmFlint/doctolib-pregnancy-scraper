@@ -4,12 +4,18 @@
   "description": "",
   "main": "script.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "serverless offline start",
+    "deploy": "serverless deploy"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "axios": "^0.24.0"
+  },
+  "devDependencies": {
+    "serverless": "^2.64.1",
+    "serverless-offline-scaleway": "^1.0.3",
+    "serverless-scaleway-functions": "^0.2.3"
   }
 }
